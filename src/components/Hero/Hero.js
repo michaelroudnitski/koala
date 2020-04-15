@@ -12,7 +12,12 @@ function Hero() {
       <h1 className="display-4 d-inline highlight">Roudnitski</h1>
       <h6 className="text-muted">Software Engineer | Toronto, Canada</h6>
       <Socials />
-      <img className="my-3 ml-md-auto" src={meImg} alt="me on a canoe" />
+      <img
+        id="me-img"
+        className="my-5 my-md-4 d-block d-md-inline ml-auto"
+        src={meImg}
+        alt="me on a canoe"
+      />
     </div>
   );
 }
