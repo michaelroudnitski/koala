@@ -5,10 +5,15 @@ import tabsImg from "../../assets/tabs.jpeg";
 import junojumpImg from "../../assets/junojump.png";
 import snakeImg from "../../assets/snake.gif";
 
+const works = [
+  { img: tabsImg, name: "Tabs" },
+  { img: junojumpImg, name: "Juno Jump" },
+  { img: snakeImg, name: "Snake" },
+];
+
 function MyWork() {
-  const images = [tabsImg, junojumpImg, snakeImg];
-  const previews = images.map((img, index) => (
-    <WorkPreview img={img} key={index} />
+  const previews = works.map((work, index) => (
+    <WorkPreview img={work.img} name={work.name} key={index} />
   ));
 
   return (
