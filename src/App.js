@@ -10,7 +10,8 @@ function App() {
     <div>
       <WebNavbar />
       <Container>
-        <Dots />
+        <Dots color="#ffd400" left={0} top={360} />
+        <Dots right={0} top={120} />
         <Hero />
       </Container>
     </div>
