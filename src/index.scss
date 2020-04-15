@@ -13,13 +13,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.background-dot-grid {
-  width: 140px;
-  height: 200px;
-  background-image: radial-gradient($yellow 4px, transparent 0);
-  background-size: 25px 25px;
-  position: absolute;
-  left: 0;
-  top: 356px;
-}

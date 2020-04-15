@@ -1,0 +1,11 @@
+$yellow: #ffd400;
+
+.background-dot-grid {
+  width: 140px;
+  height: 200px;
+  background-image: radial-gradient($yellow 3px, transparent 0);
+  background-size: 20px 20px;
+  position: absolute;
+  left: 0;
+  top: 356px;
+}

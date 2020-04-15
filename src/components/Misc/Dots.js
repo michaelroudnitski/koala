@@ -1,7 +1,13 @@
 import React from "react";
 
+import "./Dots.scss";
+
 function Dots(props) {
-  return <div className="background-dot-grid"></div>;
+  const style = {
+    left: props.left,
+  };
+
+  return <div style={style} className="background-dot-grid"></div>;
 }
 
 export default Dots;
