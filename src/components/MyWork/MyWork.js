@@ -7,14 +7,16 @@ import snakeImg from "../../assets/snake.gif";
 
 function MyWork() {
   const images = [tabsImg, junojumpImg, snakeImg];
-  const previews = images.map((img) => <WorkPreview img={img} />);
+  const previews = images.map((img, index) => (
+    <WorkPreview img={img} key={index} />
+  ));
 
   return (
     <div className="col">
       <div className="row mx-0 mt-5 justify-content-between">
         <h4>My Work</h4>
         <a href="/#">
-          <h4>See More</h4>
+          <h5>See More</h5>
         </a>
       </div>
       <div className="horizontal-scrolling-wrapper">{previews}</div>
