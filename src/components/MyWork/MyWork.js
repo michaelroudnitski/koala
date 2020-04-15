@@ -1,5 +1,5 @@
 import React from "react";
-import WorkPreview from "../Misc/WorkPreview";
+import WorkPreview from "./WorkPreview";
 import "./MyWork.scss";
 import tabsImg from "../../assets/tabs.jpeg";
 import junojumpImg from "../../assets/junojump.png";
@@ -18,7 +18,7 @@ function MyWork() {
   ));
 
   return (
-    <div className="col">
+    <div className="col bg-white">
       <SectionHeader title="My Work" link="/#" linkTitle="See More" />
       <div className="horizontal-scrolling-wrapper">{previews}</div>
     </div>
