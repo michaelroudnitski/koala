@@ -4,6 +4,7 @@ import "./MyWork.scss";
 import tabsImg from "../../assets/tabs.jpeg";
 import junojumpImg from "../../assets/junojump.png";
 import snakeImg from "../../assets/snake.gif";
+import SectionHeader from "../Misc/SectionHeader";
 
 const works = [
   { img: tabsImg, name: "Tabs" },
@@ -18,12 +19,7 @@ function MyWork() {
 
   return (
     <div className="col">
-      <div className="row mx-0 mt-5 justify-content-between">
-        <h4>My Work</h4>
-        <a href="/#">
-          <h5>See More</h5>
-        </a>
-      </div>
+      <SectionHeader title="My Work" link="/#" linkTitle="See More" />
       <div className="horizontal-scrolling-wrapper">{previews}</div>
     </div>
   );

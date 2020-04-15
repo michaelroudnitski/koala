@@ -5,6 +5,7 @@ import Dots from "./components/Misc/Dots";
 
 import Container from "react-bootstrap/Container";
 import MyWork from "./components/MyWork/MyWork";
+import Resume from "./components/Resume/Resume";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           </div>
           <div className="col-md-6">
             <MyWork />
+          </div>
+          <div className="col-md-6"></div>
+          <div className="col-md-6">
+            <Resume />
           </div>
         </div>
       </Container>
