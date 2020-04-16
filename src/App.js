@@ -21,7 +21,7 @@ function App() {
           <div className="col-md-6 mt-auto">
             <MyWork />
           </div>
-          <div className="col-md-6"></div>
+          <div className="col-md-6 d-flex"></div>
           <div className="col-md-6">
             <Resume />
           </div>

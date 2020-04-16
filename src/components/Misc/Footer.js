@@ -1,6 +1,7 @@
 import React from "react";
 import Socials from "./Socials";
 import Dots from "./Dots";
+import GitHubStats from "./GitHubStats";
 
 function Footer() {
   return (
@@ -26,33 +27,18 @@ function Footer() {
                 <li>
                   <a href="https://apps.apple.com/ca/developer/michael-roudnitski/id1489070114">
                     App Store
-                  </a>{" "}
-                  |{" "}
+                  </a>
+                </li>
+                <li>
                   <a href="https://play.google.com/store/apps/developer?id=Michael+Roudnitski">
                     Play Store
                   </a>
                 </li>
-                <li></li>
               </ul>
             </div>
-
             <div className="col-md-3 mx-auto">
-              <h5 className="mt-3 mb-4">Links</h5>
-
-              <ul className="list-unstyled">
-                <li>
-                  <a href="#!">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!">Link 4</a>
-                </li>
-              </ul>
+              <h5 className="mt-3 mb-4">GitHub Stats</h5>
+              <GitHubStats />
             </div>
           </div>
         </div>
