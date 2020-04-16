@@ -1,10 +1,9 @@
 import React from "react";
-
 import Media from "react-bootstrap/Media";
 
 function Resume({ title, years, logoUrl }) {
   return (
-    <Media className="col">
+    <Media className="col border rounded my-2">
       <img
         width={128}
         height={128}

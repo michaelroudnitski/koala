@@ -3,11 +3,13 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
 import App from "./App";
+import Footer from "./components/Misc/Footer";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Footer />
   </React.StrictMode>,
   document.getElementById("root")
 );

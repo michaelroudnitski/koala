@@ -18,6 +18,7 @@ function WorkPreview(props) {
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
     >
       <animated.img
+        className="border rounded"
         src={props.img}
         style={{ transform: anim.xys.interpolate(trans) }}
         alt="Project Preview"

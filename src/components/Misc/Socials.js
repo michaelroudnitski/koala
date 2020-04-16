@@ -3,7 +3,7 @@ import { GitHub, Linkedin } from "react-feather";
 
 function Socials() {
   return (
-    <div className="row mx-0">
+    <div className="row mx-0 d-block">
       <a href="https://github.com/michaelroudnitski">
         <GitHub className="mr-2" />
       </a>
