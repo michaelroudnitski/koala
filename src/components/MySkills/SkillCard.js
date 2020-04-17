@@ -1,6 +1,8 @@
 import React from "react";
 import Dots from "../Misc/Dots";
 
+// !TODO Make top-colored-line expand on hover
+
 function SkillCard({ title, body, color }) {
   return (
     <div className="col-md-4 col-12 my-2">

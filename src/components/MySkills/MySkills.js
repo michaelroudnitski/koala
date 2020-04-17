@@ -10,7 +10,7 @@ const skills = [
     color: "#EB5757",
   },
   {
-    title: "UI/UX",
+    title: "UI_UX",
     body: "My UI/UIX experience here",
     color: "#ffd400",
   },

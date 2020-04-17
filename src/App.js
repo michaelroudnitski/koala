@@ -7,6 +7,7 @@ import Hero from "./components/Hero/Hero";
 import MyWork from "./components/MyWork/MyWork";
 import MySkills from "./components/MySkills/MySkills";
 import Resume from "./components/Resume/Resume";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           </div>
           <div className="col-md-6">
             <Resume />
+          </div>
+          <div className="col-md-6">
+            <ContactForm />
           </div>
         </div>
       </Container>
