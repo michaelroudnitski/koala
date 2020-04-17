@@ -1,10 +1,11 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
 import WebNavbar from "./components/WebNavbar/WebNavbar";
-import Hero from "./components/Hero/Hero";
 import Dots from "./components/Misc/Dots";
 
-import Container from "react-bootstrap/Container";
+import Hero from "./components/Hero/Hero";
 import MyWork from "./components/MyWork/MyWork";
+import MySkills from "./components/MySkills/MySkills";
 import Resume from "./components/Resume/Resume";
 
 function App() {
@@ -21,7 +22,9 @@ function App() {
           <div className="col-md-6 mt-auto">
             <MyWork />
           </div>
-          <div className="col-md-6 d-flex"></div>
+          <div className="col-md-12">
+            <MySkills />
+          </div>
           <div className="col-md-6">
             <Resume />
           </div>

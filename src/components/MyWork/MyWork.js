@@ -18,7 +18,7 @@ function MyWork() {
   ));
 
   return (
-    <div className="col bg-white">
+    <div className="col">
       <SectionHeader title="My Work" link="/#" linkTitle="See More" />
       <div className="horizontal-scrolling-wrapper">{previews}</div>
     </div>

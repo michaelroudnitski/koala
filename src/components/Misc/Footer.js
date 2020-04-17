@@ -6,12 +6,12 @@ import GitHubStats from "./GitHubStats";
 function Footer() {
   return (
     <footer className="footer bg-light mt-5">
-      <Dots color="white" />
+      <Dots color="white" height={120} />
       <div className="container">
         <div className="container text-center text-md-left">
           <div className="row">
             <div className="col-md-3 mx-auto">
-              <h5 className="mt-3 mb-4">Socials</h5>
+              <h5 className="mt-3 mb-3">Socials</h5>
 
               <ul className="list-unstyled">
                 <li className="px-auto">
@@ -21,7 +21,7 @@ function Footer() {
             </div>
 
             <div className="col-md-3 mx-auto">
-              <h5 className="mt-3 mb-4">Developer Profiles</h5>
+              <h5 className="mt-3 mb-3">Developer Profiles</h5>
 
               <ul className="list-unstyled">
                 <li>
@@ -37,7 +37,6 @@ function Footer() {
               </ul>
             </div>
             <div className="col-md-3 mx-auto">
-              <h5 className="mt-3 mb-4">GitHub Stats</h5>
               <GitHubStats />
             </div>
           </div>

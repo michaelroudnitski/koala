@@ -4,7 +4,7 @@ import Spinner from "react-bootstrap/Spinner";
 function GitHubStats() {
   const [repos, setRepos] = useState({
     requestComplete: false,
-    data: [],
+    data: null,
   });
 
   useEffect(() => {
@@ -19,17 +19,20 @@ function GitHubStats() {
   let content = <Spinner role="status" animation="border" />;
 
   if (repos.requestComplete) {
-    if (repos.data !== []) {
+    if (repos.data) {
       content = (
-        <ul className="list-unstyled">
-          <li>{repos.data.length + " repositories"}</li>
-          <li>
-            {repos.data.reduce(
-              (total, curr) => total + parseInt(curr.stargazers_count),
-              0
-            ) + " stars"}
-          </li>
-        </ul>
+        <div>
+          <h5 className="mt-3 mb-3">GitHub Stats</h5>
+          <ul className="list-unstyled">
+            <li>{repos.data.length + " repositories"}</li>
+            <li>
+              {repos.data.reduce(
+                (total, curr) => total + parseInt(curr.stargazers_count),
+                0
+              ) + " stars"}
+            </li>
+          </ul>
+        </div>
       );
     } else {
       content = null;
