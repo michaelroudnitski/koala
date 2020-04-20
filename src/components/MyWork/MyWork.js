@@ -19,7 +19,7 @@ function MyWork() {
 
   return (
     <div className="col">
-      <SectionHeader title="My Work" link="/#" linkTitle="See More" />
+      <SectionHeader title="My Work" />
       <div className="horizontal-scrolling-wrapper">{previews}</div>
     </div>
   );

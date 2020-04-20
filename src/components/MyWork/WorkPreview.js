@@ -1,4 +1,5 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 
 const calc = (x, y) => [(y - 300) / 40, -(x - 300) / 60, 1.1];
@@ -17,12 +18,14 @@ function WorkPreview(props) {
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
     >
+      {/* <Link to={`/work/${props.name.split(" ").join("")}`}> */}
       <animated.img
         className="border rounded"
         src={props.img}
         style={{ transform: anim.xys.interpolate(trans) }}
         alt="Project Preview"
       />
+      {/* </Link> */}
     </div>
   );
 }

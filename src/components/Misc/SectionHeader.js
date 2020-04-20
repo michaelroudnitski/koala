@@ -1,12 +1,13 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function SectionHeader(props) {
   let link = null;
   if (props.linkTitle && props.link) {
     link = (
-      <a href={props.link}>
+      <Link to={props.link}>
         <h5>{props.linkTitle}</h5>
-      </a>
+      </Link>
     );
   } else if (props.linkTitle) {
     link = <h5>{props.linkTitle}</h5>;

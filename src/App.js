@@ -10,29 +10,27 @@ import ContactForm from "./components/ContactForm/ContactForm";
 
 function App() {
   return (
-    <div>
-      <Container id="app-container">
-        <Dots color="#ffd400" left={0} top={290} />
-        <Dots right={0} top={120} />
-        <div className="row">
-          <div className="col-md-6">
-            <Hero />
-          </div>
-          <div className="col-md-6 mt-auto">
-            <MyWork />
-          </div>
-          <div className="col-md-12">
-            <MySkills />
-          </div>
-          <div className="col-md-6">
-            <Resume />
-          </div>
-          <div className="col-md-6">
-            <ContactForm />
-          </div>
+    <Container id="app-container">
+      <Dots color="#ffd400" left={0} top={370} />
+      <Dots right={0} top={120} />
+      <div className="row">
+        <div className="col-md-6">
+          <Hero />
         </div>
-      </Container>
-    </div>
+        <div className="col-md-6 mt-auto">
+          <MyWork />
+        </div>
+        <div className="col-md-12">
+          <MySkills />
+        </div>
+        <div className="col-md-6">
+          <Resume />
+        </div>
+        <div className="col-md-6">
+          <ContactForm />
+        </div>
+      </div>
+    </Container>
   );
 }
 

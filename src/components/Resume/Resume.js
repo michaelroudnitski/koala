@@ -31,7 +31,7 @@ function Resume() {
 
   return (
     <div className="col">
-      <SectionHeader title="Resume" link="/#" linkTitle="Download" />
+      <SectionHeader title="Resume" />
       {entries}
     </div>
   );
