@@ -46,6 +46,7 @@ function ContactForm() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               disabled={submit}
+              required
             />
           </Form.Group>
           <Form.Group className="col-md-8 col-12">
@@ -57,6 +58,8 @@ function ContactForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={submit}
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
             />
           </Form.Group>
         </Form.Row>
@@ -69,6 +72,7 @@ function ContactForm() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             disabled={submit}
+            required
           />
         </Form.Group>
         <Transition
