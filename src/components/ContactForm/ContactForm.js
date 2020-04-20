@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import SectionHeader from "../Misc/SectionHeader";
 import Form from "react-bootstrap/Form";
+import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
-import { CheckCircle, Send } from "react-feather";
+import { Check } from "react-feather";
+import { Transition } from "react-spring/renderprops";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -32,48 +34,67 @@ function ContactForm() {
 
   return (
     <div>
-      <SectionHeader title="Contact Me" />
-      {!submit ? (
-        <Form onSubmit={handleSubmit}>
-          <Form.Row className="justify-content-between">
-            <Form.Group className="col-md-4 col-12">
-              <Form.Label>Your Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="name"
-                placeholder="John Doe"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group className="col-md-8 col-12">
-              <Form.Label>Your Email</Form.Label>
-              <Form.Control
-                type="email"
-                name="email"
-                placeholder="jdoe@gmail.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </Form.Group>
-          </Form.Row>
-          <Form.Group>
-            <Form.Label>Your Message</Form.Label>
+      <SectionHeader title="Contact Me 👋" />
+      <Form onSubmit={handleSubmit}>
+        <Form.Row className="justify-content-between">
+          <Form.Group className="col-md-4 col-12">
+            <Form.Label>Your Name</Form.Label>
             <Form.Control
-              as="textarea"
-              rows="3"
-              name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              type="text"
+              name="name"
+              placeholder="John Doe"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              disabled={submit}
             />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit <Send size={18} />
-          </Button>
-        </Form>
-      ) : (
-        <CheckCircle className="m-auto" color={"green"} />
-      )}
+          <Form.Group className="col-md-8 col-12">
+            <Form.Label>Your Email</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="jdoe@gmail.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={submit}
+            />
+          </Form.Group>
+        </Form.Row>
+        <Form.Group>
+          <Form.Label>Your Message</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows="3"
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            disabled={submit}
+          />
+        </Form.Group>
+        <Transition
+          items={submit}
+          from={{
+            transform: "translate3d(0,60px,0)",
+            opacity: 0,
+          }}
+          enter={{ transform: "translate3d(0,0,0)", opacity: 1 }}
+          leave={{ position: "absolute", transform: "translate3d(60px,0,0)", opacity: 0 }}
+        >
+          {(submit) =>
+            submit
+              ? (props) => (
+                  <Alert style={props} variant="success">
+                    Message Sent <Check size={18} />
+                  </Alert>
+                )
+              : (props) => (
+                  <Button style={props} variant="primary" type="submit">
+                    Submit
+                  </Button>
+                )
+          }
+        </Transition>
+      </Form>
     </div>
   );
 }
