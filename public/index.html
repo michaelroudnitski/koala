@@ -36,11 +36,11 @@
   <!--
     For Netlify form
   -->
-  <form name="contact" netlify data-netlify-recaptcha="true" hidden>
+  <form name="contact" netlify netlify-honeypot="phone" hidden>
     <input type="text" name="name" />
+    <input name="phone" /></label>
     <input type="email" name="email" />
     <textarea name="message"></textarea>
-    <div data-netlify-recaptcha="true"></div>
   </form>
 </body>
 
