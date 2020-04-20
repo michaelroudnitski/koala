@@ -6,17 +6,19 @@ import "./MySkills.scss";
 const skills = [
   {
     title: "Full Stack Development",
-    body: "My front end experience here.",
+    body:
+      "I work with the latest frameworks and technologies to deliver great front end experiences.",
     color: "#EB5757",
   },
   {
     title: "UI_UX",
-    body: "My UI/UIX experience here",
+    body:
+      "I always design and wireframe my apps with the user in mind to create enjoyable experiences.",
     color: "#ffd400",
   },
   {
     title: "Mobile (Flutter)",
-    body: "My Flutter experience here",
+    body: "I created an app used by thousands called Tabs using Flutter.",
     color: "#68D0F8",
   },
 ];
