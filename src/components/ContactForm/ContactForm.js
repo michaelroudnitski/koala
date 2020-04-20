@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import SectionHeader from "../Misc/SectionHeader";
 import Form from "react-bootstrap/Form";
-import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
-import { Check } from "react-feather";
-import { Transition } from "react-spring/renderprops";
+import SubmitButtion from "./SubmitButton";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -75,29 +72,7 @@ function ContactForm() {
             required
           />
         </Form.Group>
-        <Transition
-          items={submit}
-          from={{
-            transform: "translate3d(0,60px,0)",
-            opacity: 0,
-          }}
-          enter={{ transform: "translate3d(0,0,0)", opacity: 1 }}
-          leave={{ position: "absolute", transform: "translate3d(60px,0,0)", opacity: 0 }}
-        >
-          {(submit) =>
-            submit
-              ? (props) => (
-                  <Alert style={props} variant="success">
-                    Message Sent <Check size={18} />
-                  </Alert>
-                )
-              : (props) => (
-                  <Button style={props} variant="primary" type="submit">
-                    Submit
-                  </Button>
-                )
-          }
-        </Transition>
+        <SubmitButtion submit={submit} />
       </Form>
     </div>
   );
