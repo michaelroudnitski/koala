@@ -7,14 +7,23 @@ import snakeImg from "../../assets/snake.gif";
 import SectionHeader from "../Misc/SectionHeader";
 
 const works = [
-  { img: tabsImg, name: "Tabs" },
-  { img: junojumpImg, name: "Juno Jump" },
-  { img: snakeImg, name: "Snake" },
+  { img: tabsImg, name: "Tabs", link: "https://tabsapp.co" },
+  {
+    img: junojumpImg,
+    name: "Juno Jump",
+    link:
+      "https://play.google.com/store/apps/details?id=com.MichaelRoudnitski.Slider",
+  },
+  {
+    img: snakeImg,
+    name: "Snake",
+    link: "https://github.com/michaelroudnitski/Snake-2015",
+  },
 ];
 
 function MyWork() {
   const previews = works.map((work, index) => (
-    <WorkPreview img={work.img} name={work.name} key={index} />
+    <WorkPreview img={work.img} name={work.name} link={work.link} key={index} />
   ));
 
   return (

@@ -7,7 +7,7 @@ const skills = [
   {
     title: "Full Stack Development",
     body:
-      "I work with the latest frameworks and technologies to deliver great front end experiences.",
+      "I work with the latest frameworks and technologies to deliver great experiences.",
     color: "#EB5757",
   },
   {
@@ -18,7 +18,8 @@ const skills = [
   },
   {
     title: "Mobile (Flutter)",
-    body: "I created an app used by thousands called Tabs using Flutter.",
+    body:
+      "I created an expense sharing app called Tabs. It's used by thousands and has great reviews.",
     color: "#68D0F8",
   },
 ];
