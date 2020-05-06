@@ -9,7 +9,7 @@ function WebNavbar() {
     <Navbar>
       <Navbar.Brand href="/">MR</Navbar.Brand>
       <Nav className="ml-auto">
-        <Nav.Link to="/blog">Blog</Nav.Link>
+        <Nav.Link href="/blog">Blog</Nav.Link>
       </Nav>
     </Navbar>
   );

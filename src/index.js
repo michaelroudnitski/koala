@@ -7,6 +7,8 @@ import App from "./App";
 import PrivacyPolicy from "./components/Misc/PrivacyPolicy";
 import WebNavBar from "./components/WebNavbar/WebNavbar";
 import Footer from "./components/Misc/Footer";
+/* Blog */
+import Blog from "./components/Blog/Index/Index";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
@@ -16,6 +18,9 @@ ReactDOM.render(
       <Switch>
         <Route path="/tabs-policy">
           <PrivacyPolicy />
+        </Route>
+        <Route path="/blog">
+          <Blog />
         </Route>
         <Route path="/">
           <App />
