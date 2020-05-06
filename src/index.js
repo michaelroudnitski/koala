@@ -13,8 +13,8 @@ import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <WebNavBar />
     <Router>
+      <WebNavBar />
       <Switch>
         <Route path="/tabs-policy">
           <PrivacyPolicy />

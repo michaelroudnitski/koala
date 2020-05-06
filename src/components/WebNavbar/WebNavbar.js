@@ -1,15 +1,23 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import Button from "react-bootstrap/Button";
+import { LinkContainer } from "react-router-bootstrap";
 
 import "./WebNavbar.scss";
 
 function WebNavbar() {
   return (
     <Navbar>
-      <Navbar.Brand href="/">MR</Navbar.Brand>
+      <LinkContainer to="/">
+        <Navbar.Brand>MR</Navbar.Brand>
+      </LinkContainer>
       <Nav className="ml-auto">
-        <Nav.Link href="/blog">Blog</Nav.Link>
+        <LinkContainer to="/blog">
+          <Nav.Link>
+            <Button>Blog</Button>
+          </Nav.Link>
+        </LinkContainer>
       </Nav>
     </Navbar>
   );
