@@ -2,15 +2,10 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import moment from "moment";
 import { Link, useRouteMatch } from "react-router-dom";
+import featuredImgSrc from "../../../util/featuredImgSrc";
 
 function PostPreview({ post }) {
-  const featuredImgUrl =
-    post &&
-    post["_embedded"] &&
-    post["_embedded"]["wp:featuredmedia"] &&
-    post["_embedded"]["wp:featuredmedia"][0].source_url;
-
-  let postLink = `${useRouteMatch().url}/`;
+  const postLink = `${useRouteMatch().url}/${post.id}`;
 
   return (
     <div>
@@ -19,13 +14,13 @@ function PostPreview({ post }) {
           <Card.Img
             style={{ height: "11.25rem" }}
             variant="top"
-            src={featuredImgUrl}
+            src={featuredImgSrc(post)}
             className="rounded ml-3 mr-3"
           />
         </Link>
         <Card.Body>
           <Card.Link href={postLink}>Blog Post</Card.Link>
-          <Card.Title>{post.title.rendered}</Card.Title>
+          <Card.Title className="blog-title">{post.title.rendered}</Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
             {moment(post.date).format("MMM Do YYYY")}
           </Card.Subtitle>
