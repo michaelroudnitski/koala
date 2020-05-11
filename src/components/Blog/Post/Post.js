@@ -23,14 +23,14 @@ function Post() {
         document.title = data.title.rendered;
       })
       .catch(() => setPost({ requestComplete: true }));
-  }, []);
+  }, [postId]);
 
   let content = null;
   if (!post.requestComplete) {
     content = (
-      <div className="w-100 h-100">
+      <div className="text-center">
         <Spinner
-          className="m-auto"
+          className="mx-auto"
           variant="primary"
           role="status"
           animation="border"

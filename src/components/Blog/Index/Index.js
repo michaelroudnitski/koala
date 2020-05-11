@@ -25,7 +25,14 @@ function Index() {
 
   let content = null;
   if (!posts.requestComplete) {
-    content = <Spinner className="mx-auto" role="status" animation="border" />;
+    content = (
+      <Spinner
+        className="mx-auto"
+        variant="primary"
+        role="status"
+        animation="border"
+      />
+    );
   } else if (posts.data) {
     content = posts.data.map((post, index) => (
       <PostPreview key={index} post={post} />
