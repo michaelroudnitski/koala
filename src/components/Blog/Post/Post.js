@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import moment from "moment";
 import readingTime from "reading-time";
 import featuredImgSrc from "../../../util/featuredImgSrc";
-import Prism from "prismjs";
+import { Link } from "react-router-dom";
 import "./Post.scss";
 
 function Post() {
@@ -41,6 +41,8 @@ function Post() {
     const timeToRead = readingTime(post.data.content.rendered);
     content = (
       <Col className="post mx-auto">
+        <Link to="/blog">Back to Blog</Link>
+        <hr />
         <h1 className="text-capitalize blog-title">
           {post.data.title.rendered}
         </h1>
@@ -52,7 +54,7 @@ function Post() {
         <img
           style={{ maxHeight: "30rem", objectFit: "cover" }}
           src={featuredImgSrc(post.data)}
-          className="rounded w-100 py-4"
+          className="rounded w-100 my-4"
           alt="Featured"
         />
         <div

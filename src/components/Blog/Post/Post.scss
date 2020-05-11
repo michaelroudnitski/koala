@@ -2,41 +2,47 @@ $yellow: #ffd400;
 $muted: #6c757d;
 
 .post {
-    max-width: 720px;
+  max-width: 680px;
 
-    img {
-        max-width: 100%;
-        border-radius: 2px;
+  .post-content {
+    p,
+    ul {
+      margin-bottom: 2em;
     }
+  }
 
-    figcaption {
-        color: $muted !important;
-        text-align: center;
+  img {
+    max-width: 100%;
+    border-radius: 3px;
+  }
+
+  figcaption {
+    color: $muted !important;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  blockquote {
+    border-left: solid $yellow 5px;
+    padding-left: 2em;
+    padding-bottom: 1em;
+
+    cite {
+      color: $muted !important;
     }
+  }
 
-    p {
-        font-size: 1.2em;
-    }
+  pre {
+    overflow-x: auto;
+    border-radius: 5px;
+    border: solid 1px $muted;
+    padding: 1em;
+  }
 
-    blockquote {
-        border-left: solid $yellow 5px;
-        padding-left: 2em;
-        padding-top: 1em;
-        padding-bottom: 1em;
-
-        cite {
-            color: $muted !important;
-        }
-    }
-
-    pre {
-        overflow-x: auto;
-        border-radius: 5px;
-        border: solid 1px $muted;
-        padding: 1em;
-    }
-
-    .wp-block-gallery .blocks-gallery-item {
-        list-style: none;
-    }
+  .wp-block-gallery .blocks-gallery-item {
+    list-style: none;
+  }
 }
