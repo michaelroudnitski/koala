@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import moment from "moment";
 import readingTime from "reading-time";
 import featuredImgSrc from "../../../util/featuredImgSrc";
+import Prism from "prismjs";
 import "./Post.scss";
 
 function Post() {
@@ -39,7 +40,7 @@ function Post() {
   } else if (post.data) {
     const timeToRead = readingTime(post.data.content.rendered);
     content = (
-      <Col style={{ maxWidth: 720 }} className="mx-auto">
+      <Col className="post mx-auto">
         <h1 className="text-capitalize blog-title">
           {post.data.title.rendered}
         </h1>

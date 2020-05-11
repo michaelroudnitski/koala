@@ -1,9 +1,42 @@
-.drop-cap:first-letter {
-    font-size: 4.5em;
-    float: left;
-    margin-top: .15em;
-}
+$yellow: #ffd400;
+$muted: #6c757d;
 
-.post-content {
-    list-style: none;
+.post {
+    max-width: 720px;
+
+    img {
+        max-width: 100%;
+        border-radius: 2px;
+    }
+
+    figcaption {
+        color: $muted !important;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    blockquote {
+        border-left: solid $yellow 5px;
+        padding-left: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+
+        cite {
+            color: $muted !important;
+        }
+    }
+
+    pre {
+        overflow-x: auto;
+        border-radius: 5px;
+        border: solid 1px $muted;
+        padding: 1em;
+    }
+
+    .wp-block-gallery .blocks-gallery-item {
+        list-style: none;
+    }
 }
