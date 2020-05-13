@@ -16,13 +16,13 @@ ReactDOM.render(
     <Router>
       <WebNavBar />
       <Switch>
-        <Route path="/tabs-policy">
+        <Route exact path="/tabs-policy">
           <PrivacyPolicy />
         </Route>
         <Route path="/blog">
           <Blog />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <App />
         </Route>
       </Switch>

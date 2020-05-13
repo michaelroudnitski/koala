@@ -41,7 +41,7 @@ function Post() {
     const timeToRead = readingTime(post.data.content.rendered);
     content = (
       <Col className="post mx-auto">
-        <Link to="/blog">Back to Blog</Link>
+        <Link to="/blog">Back to posts</Link>
         <hr />
         <h1 className="text-capitalize blog-title">
           {post.data.title.rendered}
