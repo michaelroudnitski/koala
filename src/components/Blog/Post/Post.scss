@@ -5,6 +5,8 @@ $muted: #6c757d;
   max-width: 716px;
 
   .post-content {
+    text-rendering: optimizeLegibility;
+
     p {
       font-size: 1.2em;
     }

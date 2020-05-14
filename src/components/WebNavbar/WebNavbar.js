@@ -8,7 +8,7 @@ import "./WebNavbar.scss";
 
 function WebNavbar() {
   return (
-    <Navbar>
+    <Navbar className="px-0 px-sm-3">
       <LinkContainer to="/">
         <Navbar.Brand>MR</Navbar.Brand>
       </LinkContainer>
