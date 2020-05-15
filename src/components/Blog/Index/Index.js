@@ -12,7 +12,14 @@ function Index() {
     <Container>
       <Switch>
         <Route exact path={match.path}>
-          <h1 className="text-center d-block">Blog | Michael Roudnitski</h1>
+          <h1 className="text-center d-block">
+            <code>
+              "Michael Roudnitski"
+              <br />
+              |> blog()
+            </code>
+          </h1>
+          <hr />
           <Posts />
         </Route>
         <Route exact path={`${match.path}/:postId`}>

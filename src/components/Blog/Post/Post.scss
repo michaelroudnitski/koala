@@ -7,6 +7,10 @@ $muted: #6c757d;
   .post-content {
     text-rendering: optimizeLegibility;
 
+    .aligncenter {
+      text-align: center;
+    }
+
     p {
       font-size: 1.2em;
       font-family: 'PT Serif', serif;

@@ -37,7 +37,7 @@ function Posts() {
 
   return (
     <div>
-      <h4>New Posts</h4>
+      <h4 className="mx-3">New Posts</h4>
       <div className="horizontal-blog-post-cards">
         {content ? content : "Oops... Couldn't find what you were looking for"}
       </div>
