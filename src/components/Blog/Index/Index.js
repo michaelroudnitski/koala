@@ -22,7 +22,7 @@ function Index() {
           <hr />
           <Posts />
         </Route>
-        <Route exact path={`${match.path}/:postId`}>
+        <Route exact path={`${match.path}/:postSlug`}>
           <Post />
         </Route>
       </Switch>

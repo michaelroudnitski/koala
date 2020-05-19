@@ -9,21 +9,22 @@ import { Link } from "react-router-dom";
 import "./Post.scss";
 
 function Post() {
-  const { postId } = useParams();
+  const { postSlug } = useParams();
   const [post, setPost] = useState({
     requestComplete: false,
     data: null,
   });
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_WP_API}/posts/${postId}?_embed`)
+    fetch(`${process.env.REACT_APP_WP_API}/posts?slug=${postSlug}&_embed`)
       .then((res) => res.json())
       .then((data) => {
+        data = data[0];
         setPost({ requestComplete: true, data });
         document.title = data.title.rendered;
       })
       .catch(() => setPost({ requestComplete: true }));
-  }, [postId]);
+  }, [postSlug]);
 
   let content = null;
   if (!post.requestComplete) {

@@ -5,7 +5,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 import featuredImgSrc from "../../../util/featuredImgSrc";
 
 function PostPreview({ post }) {
-  const postLink = `${useRouteMatch().url}/${post.id}`;
+  const postLink = `${useRouteMatch().url}/${post.slug}`;
 
   return (
     <div>
