@@ -4,9 +4,11 @@ import Container from "react-bootstrap/Container";
 import Posts from "../Posts/Posts";
 import Post from "../Post/Post";
 import "./Index.scss";
+import ReactGa from "react-ga";
 
 function Index() {
   const match = useRouteMatch();
+  ReactGa.pageview(window.location.pathname + window.location.search);
 
   return (
     <Container>

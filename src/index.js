@@ -10,6 +10,10 @@ import Footer from "./components/Misc/Footer";
 /* Blog */
 import Blog from "./components/Blog/Index/Index";
 import * as serviceWorker from "./serviceWorker";
+import ReactGA from "react-ga";
+
+ReactGA.initialize("UA-149927942-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
   <React.StrictMode>
