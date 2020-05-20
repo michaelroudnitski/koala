@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Spinner from "react-bootstrap/Spinner";
-import Col from "react-bootstrap/Col";
-import moment from "moment";
-import readingTime from "reading-time";
-import featuredImgSrc from "../../../util/featuredImgSrc";
 import { Link } from "react-router-dom";
 import MetaTags from "react-meta-tags";
+import Col from "react-bootstrap/Col";
+import Spinner from "react-bootstrap/Spinner";
+import featuredImgSrc from "../../../util/featuredImgSrc";
+import Article from "./Article";
 import "./Post.scss";
 
 function Post() {
@@ -39,7 +38,6 @@ function Post() {
       </div>
     );
   } else if (post.data) {
-    const timeToRead = readingTime(post.data.content.rendered);
     content = (
       <Col className="post mx-auto">
         <MetaTags>
@@ -50,33 +48,12 @@ function Post() {
         </MetaTags>
         <Link to="/blog">Back to posts</Link>
         <hr />
-        <h1 className="text-capitalize blog-title">
-          {post.data.title.rendered}
-        </h1>
-        <h6 className="text-muted">
-          {moment(post.date).format("MMM Do YYYY")}
-          <span className="text-warning"> · </span>
-          {timeToRead.text}
-        </h6>
-        <img
-          style={{ maxHeight: "30rem", objectFit: "cover" }}
-          src={featuredImgSrc(post.data)}
-          className="rounded w-100 my-4"
-          alt="Featured"
-        />
-        <div
-          className="post-content"
-          dangerouslySetInnerHTML={createMarkup(post.data.content.rendered)}
-        />
+        <Article post={post} />
       </Col>
     );
   }
 
-  return content;
-}
-
-function createMarkup(html) {
-  return { __html: html };
+  return content ? content : "Sorry... couldn't find what you were looking for";
 }
 
 export default Post;
