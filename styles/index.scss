@@ -1,0 +1,74 @@
+$yellow: #ffd400;
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+#app-container {
+    margin-top: 48px;
+}
+
+div.card {
+    border: none;
+}
+
+h1,
+h1.display-4,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+    font-weight: 700;
+
+    &.highlight {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 82%, $yellow 65%);
+        background-position-y: -20px;
+        background-position-x: -10px;
+    }
+}
+
+img#me-img {
+    max-width: 85%;
+}
+
+.skill-card {
+    height: 100%;
+}
+
+.horizontal-blog-post-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    img {
+        object-fit: cover;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.blog-title {
+    font-family: 'Lora', serif;
+    font-weight: bold;
+}
