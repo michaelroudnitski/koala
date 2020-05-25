@@ -11,7 +11,7 @@ function PostPreview({ post }) {
   return (
     <div>
       <Card style={{ width: "18rem" }} className="mr-3">
-        <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
+        <Link href="/blog/[slug]" prefetch={false} as={`/blog/${post.slug}`}>
           <a onClick={() => setSpinner(true)}>
             <Card.Img
               style={{ height: "11.25rem" }}
@@ -30,8 +30,12 @@ function PostPreview({ post }) {
               animation="grow"
             />
           ) : (
-            <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
-              <a onClick={() => setSpinner(true)}>Blog Post</a>
+            <Link
+              href="/blog/[slug]"
+              prefetch={false}
+              as={`/blog/${post.slug}`}
+            >
+              <a onClick={() => setSpinner(true)}>Read Now</a>
             </Link>
           )}
           <Card.Title className="blog-title">{post.title.rendered}</Card.Title>

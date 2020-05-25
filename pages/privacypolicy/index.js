@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import Container from "react-bootstrap/Container";
 import { ArrowLeftCircle } from "react-feather";
@@ -5,10 +6,15 @@ import { ArrowLeftCircle } from "react-feather";
 function PrivacyPolicy() {
   return (
     <Container id="priv-policy-container">
+      <Head>
+        <title>Tabs Privacy Policy</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+      </Head>
       <h2>
-        <Link to="/">
+        <a href="/">
           <ArrowLeftCircle size={28} className="mb-1 mr-3" />
-        </Link>
+        </a>
         Tabs Privacy Policy
       </h2>
       <p>

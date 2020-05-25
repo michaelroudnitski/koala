@@ -13,6 +13,16 @@ export default function Home() {
       <Head>
         <title>Michael Roudnitski</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="SWE Intern @ IBM | Computer Science @ York University"
+        />
+        <meta
+          name="keywords"
+          content="michael roudnitski,roudnitski,michael,mroudnitski,michaelroudnitski,michaelr,software engineer,blog,michael roudnitski blog,software engineer blog,ibm blog"
+        />
+        <meta property="og:type" content="website" />
       </Head>
 
       <main>

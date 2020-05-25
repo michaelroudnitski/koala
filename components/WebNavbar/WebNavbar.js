@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 
-import Link from "next/link";
 import style from "./WebNavbar.module.scss";
 
 function WebNavbar() {
@@ -11,7 +10,9 @@ function WebNavbar() {
     <div className="px-0 px-sm-3">
       <Navbar className={style.navbar}>
         <Navbar.Brand>
-          <a href="/">MR</a>
+          <a className="text-dark" href="/">
+            MR
+          </a>
         </Navbar.Brand>
         <Nav className="ml-auto">
           <a href="/blog">
