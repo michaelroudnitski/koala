@@ -1,14 +1,6 @@
-import React from "react";
-
 function SectionHeader(props) {
   let link = null;
-  if (props.linkTitle && props.link) {
-    link = (
-      <Link to={props.link}>
-        <h5>{props.linkTitle}</h5>
-      </Link>
-    );
-  } else if (props.linkTitle) {
+  if (props.linkTitle) {
     link = <h5>{props.linkTitle}</h5>;
   } else if (props.link) {
     console.error(

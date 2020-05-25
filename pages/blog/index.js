@@ -1,12 +1,8 @@
 import Head from "next/head";
 import Container from "react-bootstrap/Container";
 import Posts from "../../components/Blog/Posts/Posts";
-// import ReactGa from "react-ga";
 
 function Index({ posts }) {
-  // const match = useRouteMatch();
-  // ReactGa.pageview(window.location.pathname + window.location.search);
-
   return (
     <Container>
       <Head>

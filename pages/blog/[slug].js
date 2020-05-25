@@ -1,10 +1,8 @@
 import Head from "next/head";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
-import Spinner from "react-bootstrap/Spinner";
 import Article from "../../components/Blog/Article/Article";
 import featuredImgSrc from "../../util/featuredImgSrc";
-import { useRouter } from "next/router";
 
 const Post = ({ post }) => {
   return (
