@@ -7,19 +7,6 @@ import featuredImgSrc from "../../util/featuredImgSrc";
 import { useRouter } from "next/router";
 
 const Post = ({ post }) => {
-  if (useRouter().isFallback)
-    return (
-      <div className="vh-80 w-100 text-center">
-        <Spinner
-          className="m-auto"
-          role="status"
-          variant="primary"
-          animation="grow"
-        />
-      </div>
-    );
-  console.log(featuredImgSrc(post));
-
   return (
     <Container>
       <Head>
@@ -58,7 +45,7 @@ export async function getStaticPaths() {
     params: { slug: post.slug },
   }));
 
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
