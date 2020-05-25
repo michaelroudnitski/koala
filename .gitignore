@@ -24,4 +24,4 @@ yarn-error.log*
 /wp
 
 uploads/
-.next/
+.next
