@@ -22,6 +22,7 @@ const Post = ({ post }) => {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title.rendered} />
         <meta property="og:image" content={featuredImgSrc(post)} />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title.rendered} />
         <meta name="twitter:image" content={featuredImgSrc(post)} />
         <meta name="twitter:creator" content="@mroudnitski" />
