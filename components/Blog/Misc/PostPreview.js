@@ -10,7 +10,6 @@ function PostPreview({ post }) {
   return (
     <div>
       <Card style={{ width: "18rem" }} className="mr-3">
-        {/* we don't want to use <a> instead of <Link> here so that a new page is loaded rather than the component mounting */}
         <a href={`/blog/${post.slug}`} onClick={() => setSpinner(true)}>
           <Card.Img
             style={{ height: "11.25rem" }}

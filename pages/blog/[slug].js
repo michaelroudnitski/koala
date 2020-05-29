@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Article from "../../components/Blog/Article/Article";
 import featuredImgSrc from "../../util/featuredImgSrc";
+import { parse } from "node-html-parser";
 
 const Post = ({ post }) => {
   return (
@@ -11,13 +12,11 @@ const Post = ({ post }) => {
         <title>{post.title.rendered}</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="SWE Intern @ IBM | Computer Science @ York University"
-        />
+        <meta name="description" content={parse(post.excerpt.rendered).text} />
+        <meta name="author" content="Michael Roudnitski" />
         <meta
           name="keywords"
-          content="michael roudnitski,roudnitski,michael,mroudnitski,michaelroudnitski,michaelr,software engineer,blog,michael roudnitski blog,software engineer blog,ibm blog"
+          content="michael roudnitski,roudnitski,mroudnitski,michaelroudnitski,software engineer,full stack,developer blog,intern blog,blog,software engineer blog,ibm blog"
         />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={post.title.rendered} />
@@ -28,7 +27,7 @@ const Post = ({ post }) => {
         <meta name="twitter:creator" content="@mroudnitski" />
       </Head>
       <Col className="post mx-auto">
-        <a href="/blog">Back to posts</a>
+        <a href="/blog">See more articles</a>
         <hr />
         <Article post={post} />
       </Col>
