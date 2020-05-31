@@ -13,6 +13,7 @@ function Dots(props) {
     bottom: props.bottom,
     width: props.width || 140,
     height: props.height || 200,
+    zIndex: -5,
   };
 
   return <div style={style} />;

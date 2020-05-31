@@ -22,14 +22,13 @@ function Index({ posts }) {
         <meta name="twitter:title" content="Blog | Michael Roudnitski" />
         <meta name="twitter:creator" content="@mroudnitski" />
       </Head>
-      <h1 className="text-center d-block">
-        <code>
-          "Michael Roudnitski"
-          <br />
-          |> blog()
-        </code>
-      </h1>
-      <hr />
+      <div className=" text-center d-block">
+        <h2 style={{ fontWeight: 900 }}>Hey 👋, I'm Michael</h2>
+        <h4>
+          Welcome to my <code>blog()</code>
+        </h4>
+      </div>
+      <br />
       <Posts posts={posts} />
     </Container>
   );

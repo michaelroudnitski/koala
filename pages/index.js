@@ -3,6 +3,7 @@ import Dots from "../components/Misc/Dots";
 
 import Hero from "../components/Hero/Hero";
 import MyWork from "../components/MyWork/MyWork";
+import Posts from "../components/Blog/Posts/Posts";
 import MySkills from "../components/MySkills/MySkills";
 import Resume from "../components/Resume/Resume";
 import ContactForm from "../components/ContactForm/ContactForm";
@@ -29,11 +30,14 @@ export default function Home() {
         <Dots color="#ffd400" left={0} top={370} />
         <Dots right={0} top={120} />
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-4">
             <Hero />
           </div>
-          <div className="col-md-6 mt-auto">
+          <div className="col-md-8 mt-auto">
             <MyWork />
+          </div>
+          <div className="col-md-12">
+            <Posts />
           </div>
           <div className="col-md-12">
             <MySkills />
