@@ -16,6 +16,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
         <meta
+          name="google-site-verification"
+          content="uMnOLrZSBvORYs6F3iMWsG0m22jE7_SXxPK-Pm0unZc"
+        />
+        <meta
           name="description"
           content="SWE Intern @ IBM | Computer Science @ York University"
         />
