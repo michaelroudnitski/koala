@@ -3,7 +3,6 @@ import Dots from "../components/Misc/Dots";
 
 import Hero from "../components/Hero/Hero";
 import MyWork from "../components/MyWork/MyWork";
-import Posts from "../components/Blog/Posts/Posts";
 import MySkills from "../components/MySkills/MySkills";
 import Resume from "../components/Resume/Resume";
 import ContactForm from "../components/ContactForm/ContactForm";
@@ -39,9 +38,6 @@ export default function Home() {
           </div>
           <div className="col-md-8 mt-auto">
             <MyWork />
-          </div>
-          <div className="col-md-12">
-            <Posts />
           </div>
           <div className="col-md-12">
             <MySkills />
