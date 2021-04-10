@@ -18,7 +18,7 @@ const resume = [
     logoUrl: cmLogo,
   },
   {
-    title: "(Hon) BSc. Computer Science",
+    title: "BSc. Computer Science",
     years: "2017-2021",
     logoUrl: yorkLogo,
   },

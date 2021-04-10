@@ -54,31 +54,6 @@ img#me-img {
     height: 100%;
 }
 
-.horizontal-blog-post-cards {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    img {
-        object-fit: cover;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-}
-
-.blog-title {
-    font-family: 'Lora', serif;
-    font-weight: bold;
-}
-
 video {
     width: 100%;
 }

@@ -24,7 +24,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="michael roudnitski,roudnitski,michael,mroudnitski,michaelroudnitski,michaelr,software engineer,blog,michael roudnitski blog,software engineer blog,ibm blog"
+          content="michael roudnitski,roudnitski,michael,mroudnitski,michaelroudnitski,michaelr,software engineer,michael roudnitski blog,software engineer blog"
         />
         <meta property="og:type" content="website" />
       </Head>

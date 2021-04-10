@@ -14,11 +14,6 @@ function WebNavbar() {
             MR
           </a>
         </Navbar.Brand>
-        <Nav className="ml-auto">
-          <a href="/blog">
-            <Button>Blog</Button>
-          </a>
-        </Nav>
       </Navbar>
     </div>
   );
