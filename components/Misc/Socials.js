@@ -1,12 +1,9 @@
 import React from "react";
-import { GitHub, Linkedin, Twitter, Book } from "react-feather";
+import { GitHub, Linkedin, Twitter } from "react-feather";
 
 function Socials() {
   return (
     <div className="row mx-0 d-block">
-      <a href="https://dev.to/mroudnitski" title="Blog">
-        <Book className="mx-2" />
-      </a>
       <a href="https://github.com/michaelroudnitski" title="GitHub">
         <GitHub className="mr-2" />
       </a>

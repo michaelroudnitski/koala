@@ -13,7 +13,7 @@ function WorkPreview(props) {
 
   return (
     <div
-      className="p-4"
+      className="pr-4"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
     >

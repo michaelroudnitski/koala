@@ -11,9 +11,14 @@ function WebNavbar() {
       <Navbar className={style.navbar}>
         <Navbar.Brand>
           <a className="text-dark" href="/">
-            MR
+            _mroudnitski
           </a>
         </Navbar.Brand>
+        <Nav className="ml-auto">
+          <a href="https://dev.to/mroudnitski">
+            <Button>Blog</Button>
+          </a>
+        </Nav>
       </Navbar>
     </div>
   );
