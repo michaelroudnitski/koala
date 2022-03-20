@@ -8,7 +8,7 @@ import yorkLogo from "../../assets/york.jpg";
 
 const resume = [
   {
-    title: "Software Engineer Intern",
+    title: "Software Engineer",
     years: "2020-present",
     logoUrl: ibmLogo,
   },
